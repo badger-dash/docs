@@ -1,4 +1,4 @@
-var staticCacheName = "badgerDocs";
+var staticCacheName = "badgerDocs2";
 
 self.addEventListener("install", function (e) {
   e.waitUntil(
