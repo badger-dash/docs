@@ -38,6 +38,35 @@ var file = {
     docName: null,
     content: null
 }
+
+
+    // FOR WEB APP INSTALL
+window.addEventListener("load", () => {
+    registerSW();
+  });
+  async function registerSW() {
+    if ("serviceWorker" in navigator) {
+      try {
+        await navigator.serviceWorker.register("serviceworker.js");
+      } catch (e) {
+        console.log("SW registration failed");
+      }
+    }
+  }
+  beforeInstallPrompt = null;
+  window.addEventListener("beforeinstallprompt", eventHandler, errorHandler);
+  function eventHandler(event) {
+    beforeInstallPrompt = event;
+  }
+  function errorHandler(event) {
+    console.log("error: " + event);
+  }
+  function install() {
+    if (beforeInstallPrompt) beforeInstallPrompt.prompt();
+  }
+
+
+
     // "<URL> #/ USERNAME / FILE / FOLDER / FILE_NUMBER" FORMAT
 var filePath = window.location.hash.split("/")[1];
     // GET USER NAME FROM URL
