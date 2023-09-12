@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.json" id="manifest"/>
   </head>
   <body>
     <div id="top">
@@ -66,16 +66,16 @@
 
       <!-- NAME, FONT, TEXT CUSTOMIZATIONS ETC. -->
       <div id="editing-options">
-        <input type="text" placeholder="Untitled document" autocomplete="off">
+        <input type="text" placeholder="Untitled document" autocomplete="off" id="document-title-input">
 
         <p class="label">Text size</p>
-        <input type="text" placeholder="12" autocomplete="off" class="small">
+        <input type="text" placeholder="12" autocomplete="off" class="small" id="document-lettersize-input">
 
         <p class="label">Line space</p>
-        <input type="text" placeholder="1" autocomplete="off" class="small">
+        <input type="text" placeholder="1" autocomplete="off" class="small" id="document-linespace-input">
 
         <p class="label">Font name</p>
-        <input type="text" placeholder="Default serif" autocomplete="off">
+        <input type="text" placeholder="Default serif" autocomplete="off" id="document-font-input">
 
         <button class="icon"><span class="material-icons">format_align_left</span></button>
         <button class="icon"><span class="material-icons">format_align_center</span></button>
