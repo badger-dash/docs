@@ -6,9 +6,10 @@ var timeData = {
     whichMonth: months[d.getMonth()],
     whichYear: d.getFullYear(),
     whichDate: d.getDate(),
-    whichTime: `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`,
-    returnTotal: `${timeData.whichTime} ${timeData.whichDay}, ${timeData.whichMonth} ${timeData.whichDate}, ${timeData.whichYear}`
+    whichTime: `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
 }
+var totalTimeFormat = `${timeData.whichTime} ${timeData.whichDay}, ${timeData.whichMonth} ${timeData.whichDate}, ${timeData.whichYear}`;
+
     // HTML ELEMENTS
 var page = document.getElementById("page");
 var backgroundSheet = document.getElementById("background");
